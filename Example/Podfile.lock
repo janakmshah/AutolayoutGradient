@@ -1,0 +1,16 @@
+PODS:
+  - AutolayoutGradient (0.1.0)
+
+DEPENDENCIES:
+  - AutolayoutGradient (from `../`)
+
+EXTERNAL SOURCES:
+  AutolayoutGradient:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AutolayoutGradient: bddb9f8c9ac734de2dccdef4159c5e86af1c51ad
+
+PODFILE CHECKSUM: c16721c8ee74b22f70badfece7cf4887d5869ac3
+
+COCOAPODS: 1.9.3

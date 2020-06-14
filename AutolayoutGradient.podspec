@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AutolayoutGradient'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of AutolayoutGradient.'
+  s.version          = '1.0.0'
+  s.summary          = 'Gradient views that respect autolayout'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  Problem: Applying a color gradient as the background of a UIView WITHOUT replacing the view's layer means that as soon as the view's bounds change (because of autolayout) the gradient DOES NOT update accordingly.
+  Solution: This lib adds a simple way to ensure the applied gradient updates as expected when a view's bounds are changed.
                        DESC
 
-  s.homepage         = 'https://github.com/Janak Shah/AutolayoutGradient'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Janak Shah' => 'janak.shah@cuvva.com' }
-  s.source           = { :git => 'https://github.com/Janak Shah/AutolayoutGradient.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+    s.homepage         = 'https://github.com/janakmshah/AutolayoutGradient'
+    s.license          = { :type => 'MIT', :file => 'LICENSE' }
+    s.author           = { 'Janak Shah' => 'janak.shah@cuvva.com' }
+    s.source           = { :git => 'https://github.com/janakmshah/AutolayoutGradient.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'AutolayoutGradient/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'AutolayoutGradient' => ['AutolayoutGradient/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-end
+    s.ios.deployment_target = '8.0'
+    s.source_files = 'AutolayoutGradient/Classes/**/*'
+    s.frameworks = 'UIKit'
+     if s.respond_to? 'swift_version'
+       s.swift_version = '5.0'
+     end
+  end

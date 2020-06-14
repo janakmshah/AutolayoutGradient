@@ -1,0 +1,6 @@
+framework module Pods_AutolayoutGradient_Tests {
+  umbrella header "Pods-AutolayoutGradient_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

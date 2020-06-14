@@ -1,0 +1,6 @@
+framework module AutolayoutGradient {
+  umbrella header "AutolayoutGradient-umbrella.h"
+
+  export *
+  module * { export * }
+}
