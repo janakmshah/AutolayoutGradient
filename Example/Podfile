@@ -1,0 +1,6 @@
+use_frameworks!
+target 'AutolayoutGradient_Tests' do
+  pod 'AutolayoutGradient', :path => '../'
+  
+  
+end
